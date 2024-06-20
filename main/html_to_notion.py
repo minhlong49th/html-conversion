@@ -40,10 +40,7 @@ def convert_html_to_notion_blocks(html):
     
 def split_text_into_blocks(text, block_type):
     blocks = []
-    current_block = ''
     current_block_text = ''
-
-    print(f"Block Type: {block_type}")
 
     for char in text:
         if len(current_block_text) == 2000:

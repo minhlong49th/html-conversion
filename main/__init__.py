@@ -3,7 +3,7 @@ import os
 from flask import Flask
 
 from .config import config_by_name
-from . import html_to_pdf, html_to_notion
+from . import html_to_pdf, html_to_notion, html_to_google_docs
 
 def create_app(config_name):
     # create and configure the app
@@ -35,5 +35,6 @@ def create_app(config_name):
 
     app.register_blueprint(html_to_pdf.html_to_pdf_bp)
     app.register_blueprint(html_to_notion.html_to_notions_bp)
+    app.register_blueprint(html_to_google_docs.html_to_google_docs_bp)
 
     return app
