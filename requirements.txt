@@ -9,7 +9,7 @@ cffi==1.15.0
 chardet==4.0.0
 charset-normalizer==3.3.2
 click==8.1.7
-command-not-found==0.3
+# command-not-found==0.3
 cryptography==3.4.8
 cssselect2==0.4.1
 dbus-python==1.2.18
@@ -20,6 +20,7 @@ Flask==3.0.3
 fonttools==4.29.1
 fs==2.4.12
 gast==0.5.2
+gunicorn==22.0.0
 html2text==2024.2.26
 html5lib==1.1
 httplib2==0.20.2
@@ -41,6 +42,7 @@ netifaces==0.11.0
 numpy==1.21.5
 oauthlib==3.2.0
 olefile==0.46
+packaging==24.1
 Pillow==9.0.1
 ply==3.11
 pycairo==1.20.1
@@ -74,4 +76,3 @@ webencodings==0.5.1
 Werkzeug==3.0.3
 zipp==1.0.0
 zopfli==0.2.3
-gunicorn==22.0.0
