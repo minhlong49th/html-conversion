@@ -23,16 +23,18 @@ def convert_html_to_notion_blocks(html):
             elif element.name == 'ol':
                 blocks.extend(split_text_into_blocks(element.text, 'numbered_list_item'))
             elif element.name == 'img':
-                blocks.append({
-                    'object': 'block',
-                    'type': 'image',
-                    'image': {
-                        'type': 'external',
-                        'external': {
-                            'url': element['src']
+                if element.has_attr('src') and (element['src'].startswith('http') or element['src'].startswith('https')):
+                    img_src = element['src']
+                    blocks.append({
+                        'object': 'block',
+                        'type': 'image',
+                        'image': {
+                            'type': 'external',
+                            'external': {
+                                'url': img_src
+                            }
                         }
-                    }
-                })
+                    })
 
         return blocks
     except Exception as e:
